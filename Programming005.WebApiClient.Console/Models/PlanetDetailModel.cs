@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Programming005.WebApi.Models.PlanetModels
+﻿namespace Programming005.WebApiClient.ConsoleUI.Models
 {
-    public class PlanetModel
+    public class PlanetDetailModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

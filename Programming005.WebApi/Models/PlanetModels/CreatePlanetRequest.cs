@@ -2,12 +2,15 @@
 
 namespace Programming005.WebApi.Models.PlanetModels
 {
-    public class PlanetModel
+    public class CreatePlanetRequest
     {
-        public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public bool HasWater { get; set; }
+        [Required]
         public string PlenatarySystem { get; set; }
+        [Required]
         public bool Livable { get; set; }
     }
 }
