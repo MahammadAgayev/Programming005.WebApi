@@ -39,7 +39,7 @@ namespace Programming005.WebApiClient.ConsoleUI
         static void ListALL()
         {
             HttpClient client = new HttpClient();
-            var response = client.GetAsync("https://localhost:44332/Planet/Planets").Result;
+            var response = client.GetAsync("http://localhost:5000/Planet/Planets").Result;
 
             response.EnsureSuccessStatusCode();
 
@@ -59,7 +59,7 @@ namespace Programming005.WebApiClient.ConsoleUI
             int planetId = int.Parse(Console.ReadLine());
 
             var client = new HttpClient();
-            var response = client.GetAsync("https://localhost:44332/Planet/Planet/" + planetId).Result;
+            var response = client.GetAsync("http://localhost:5000/Planet/Planet/" + planetId).Result;
 
             response.EnsureSuccessStatusCode();
 
@@ -95,7 +95,7 @@ namespace Programming005.WebApiClient.ConsoleUI
 
             HttpClient client = new HttpClient();
 
-            var res = client.PostAsync("https://localhost:44332/Planet/Add", content).Result;
+            var res = client.PostAsync("http://localhost:5000/Planet/Add", content).Result;
             res.EnsureSuccessStatusCode();
 
             Console.WriteLine("Successfully created");
